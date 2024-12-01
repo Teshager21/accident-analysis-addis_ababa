@@ -8,6 +8,7 @@ This is Python based Exploratory Data Analysis(Data Visualization and Exploratio
 <a><img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="Seaborn"/></a>
 <a><img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="numpy"/></a>
 <a><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn"width="110"/></a>
+<a><img src="https://scikit-learn.org/1.5/_static/scikit-learn-logo-small.png" alt="Scikit Learn"width="110"/></a>
 </p>
 
 ## About Dataset
