@@ -52,6 +52,21 @@ Here is the definition of the features listed, based on their names and example 
 31. **accident_cause**: The primary cause of the accident (e.g., 'Overspeed', 'Drunk driving').
 32. **accident_severity**: The severity of the accident's outcome ('Slight Injury', 'Serious Injury', 'Fatal injury').
 
-If any clarification or deeper analysis is required for specific features, let me know!
+### Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/Teshager21/accident-analysis-addis_ababa.git
+   cd accident-analysis-addis_ababa
+   ```
+
+
+2. **Install Dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
 ### Applications of Dataset
 RTA_Dataset_addis_ababa_subcity can be used for numerous applications such as real-time accident prediction, studying accident hotspot locations, casualty analysis and extracting cause and effect rules to predict accidents, or studying the impact of precipitation or other environmental stimuli on accident occurrence.
