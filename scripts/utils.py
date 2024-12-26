@@ -114,8 +114,8 @@ def histogram_plot(df, feature, hue, ax=None):
     # Normalize counts to proportions
     proportions = pivot_table.div(total_counts, axis=0)
 
-    # Choose a vibrant colormap
-    colors = sns.color_palette("viridis", n_colors=proportions.shape[1])
+    # a vibrant colormap
+    colors = sns.color_palette("Dark2", n_colors=proportions.shape[1])
 
     # If no axis is provided, create a new one
     if ax is None:
@@ -144,7 +144,7 @@ def histogram_plot(df, feature, hue, ax=None):
                     ha='center',
                     va='center',
                     fontsize=11,
-                    color='red',
+                    color='white',
                     weight='bold'
                 )
 
