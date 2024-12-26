@@ -17,7 +17,7 @@ This is Python based Exploratory Data Analysis(Data Visualization and Exploratio
 This data set is collected from Addis Ababa Sub city police departments for Master's research work. The data set has been prepared from manual records of road traffic accident of the year 2017-20. All the sensitive information have been excluded during data encoding and finally, it has 32 features and 12316 instances of the accident
 
 ### Content
-Here is the probable definition of the features listed, based on their names and example values:
+Here is the definition of the features listed, based on their names and example values:
 
 1. **time**: The time of the incident, recorded in HH:MM:SS format.
 2. **day_of_week**: The day of the week on which the event occurred.
