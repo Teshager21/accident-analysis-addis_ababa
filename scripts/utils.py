@@ -42,7 +42,7 @@ def count_plot(df, feature, title, ordered=True, ax=None, hue=None, figsize=(10,
     # Set plot labels and title
     ax.set_xticklabels(ax.get_xticklabels(), fontsize=12)
     ax.set_yticklabels(ax.get_yticklabels(), fontsize=12)
-    ax.set_title(title, fontsize=14)
+    ax.set_title(title, fontsize=16)
     ax.set_xlabel('')
     ax.set_ylabel('')
 
@@ -143,12 +143,12 @@ def histogram_plot(df, feature, hue, ax=None):
                     f"{height:.1%}",  # Display percentage
                     ha='center',
                     va='center',
-                    fontsize=11,
+                    fontsize=12,
                     color='white',
                     weight='bold'
                 )
 
     # Customize the plot appearance
-    ax.set_title(f'{hue} Distribution by {feature}', fontsize=14, weight='bold')
+    ax.set_title(f'{hue} Distribution by {feature}', fontsize=16, weight='bold')
     ax.set_xlabel(feature, fontsize=12)
     
