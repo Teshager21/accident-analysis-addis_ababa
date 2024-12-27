@@ -70,3 +70,31 @@ Here is the definition of the features listed, based on their names and example 
 
 ### Applications of Dataset
 RTA_Dataset_addis_ababa_subcity can be used for numerous applications such as real-time accident prediction, studying accident hotspot locations, casualty analysis and extracting cause and effect rules to predict accidents, or studying the impact of precipitation or other environmental stimuli on accident occurrence.
+## Authors
+
+👤 **Author**
+
+- Gmail: [Teshager Admasu](mailto:teshager8922@gmail.com)
+- Github: [@teshager21](https://github.com/teshager21)
+- Twitter: [@Teshage84907805](https://twitter.com/Teshage84907805)
+- Linkedin: [Teshager Admasu](https://www.linkedin.com/in/teshager-admasu-0000011a2/)
+
+👤 **Author**
+
+- Gmail: [Natnael Chala](natnaelchala@gmail.com)
+- Github: [@natiichala](https://github.com/natiichala)
+
+
+👤 **Author**
+- Gmail: [Rediet Tenaw](rediettenaw28@gmail.com)
+- Github: [@RuthAlemu](https://github.com/RuthAlemu)
+
+## 🤝 Contributing
+
+    Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Teshager21/accident-analysis-addis_ababa/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
