@@ -24,6 +24,10 @@ Here is the definition of the features listed, based on their names and example 
 3. **driver_age**: The age group of the driver, categorized into ranges such as '18-30', '31-50', etc.
 4. **driver_sex**: The gender of the driver ('Male', 'Female', or 'Unknown').
 5. **educational_level**: The highest educational qualification of the driver.
+<details>
+
+  <summary>Click to see more ...</summary>
+
 6. **vehicle_driver_relation**: The relationship between the vehicle owner and the driver (e.g., 'Owner', 'Employee', 'Other').
 7. **driving_experience**: The driver's experience level, categorized by years or specific conditions like 'No Licence'.
 8. **vehicle_type**: The type of vehicle involved in the incident (e.g., 'Automobile', 'Taxi', 'Motorcycle').
@@ -51,6 +55,7 @@ Here is the definition of the features listed, based on their names and example 
 30. **pedestrian_movement**: The movement or behavior of the pedestrian at the time of the accident.
 31. **accident_cause**: The primary cause of the accident (e.g., 'Overspeed', 'Drunk driving').
 32. **accident_severity**: The severity of the accident's outcome ('Slight Injury', 'Serious Injury', 'Fatal injury').
+</details>
 
 ### Installation
 

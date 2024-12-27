@@ -151,4 +151,27 @@ def histogram_plot(df, feature, hue, ax=None):
     # Customize the plot appearance
     ax.set_title(f'{hue} Distribution by {feature}', fontsize=16, weight='bold')
     ax.set_xlabel(feature, fontsize=12)
+
+def print_uniques(df):
+    """
+    Displays the unique values of each column in a Pandas DataFrame.
+
+    Args:
+        df: The Pandas DataFrame.
+
+    Returns:
+        A styled Pandas DataFrame showing the unique values.
+        Returns None if the input is not a DataFrame.
+    """
+    if not isinstance(df, pd.DataFrame):
+        print("Input must be a Pandas DataFrame.")
+        return None
+
+    uniques=[]
+    for i in df.columns:
+        uniques.append(df[i].unique())
+    uniques_df=pd.Series(data=uniques,index=df.columns,name='Values')
+    pd.set_option('display.max_colwidth', None) 
+    styled_df = uniques_df.to_frame().style.set_properties(**{'text-align': 'left'})
+    return styled_df
     
