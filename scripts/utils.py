@@ -43,7 +43,7 @@ def count_plot(df, feature, title, ordered=True, ax=None, hue=None, figsize=(10,
     # Set plot labels and title
     ax.set_xticklabels(ax.get_xticklabels(), fontsize=12)
     ax.set_yticklabels(ax.get_yticklabels(), fontsize=12)
-    ax.set_title(title, fontsize=16)
+    ax.set_title(prettifyTitle(title), fontsize=16)
     ax.set_xlabel('')
     ax.set_ylabel('')
 
@@ -58,7 +58,7 @@ def count_plot(df, feature, title, ordered=True, ax=None, hue=None, figsize=(10,
     # Adjust layout and display the plot if it's a standalone figure
     if own_fig:
         plt.tight_layout()
-        plt.savefig(f"images/{ax.title}.png", dpi=300, bbox_inches='tight')  # High-resolution save
+        plt.savefig(f"images/{ax.get_title()}.png", dpi=300, bbox_inches='tight')  # High-resolution save
         plt.show()
 
 
@@ -66,9 +66,6 @@ def cross_tab_features(df,feature1,feature2):
     cross_tab= pd.crosstab(index=df[feature1], columns=df[feature2], margins=True)
     pd.crosstab(index=df[feature1], columns=df[feature2], margins=True)
     return cross_tab
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 def plot_crosstab(cross_tab, ax=None):
   """
@@ -94,7 +91,7 @@ def plot_crosstab(cross_tab, ax=None):
 
   # Display the plot (only if not using an external subplot)
   if ax is None:
-    plt.savefig(f"images/{ax.title}.png", dpi=300, bbox_inches='tight')  # High-resolution save
+    plt.savefig(f"images/{ax.get_title()}.png", dpi=300, bbox_inches='tight')  # High-resolution save
     plt.show()
 
 
@@ -152,9 +149,9 @@ def histogram_plot(df, feature, hue, ax=None):
                 )
 
     # Customize the plot appearance
-    ax.set_title(f'{hue} Distribution by {feature}', fontsize=16, weight='bold')
-    ax.set_xlabel(feature, fontsize=12)
-    plt.savefig(f"images/{ax.title}.png", dpi=300, bbox_inches='tight')  # High-resolution save
+    ax.set_title(f'{prettifyTitle(hue)} Distribution by {prettifyTitle(feature)}', fontsize=16, weight='bold')
+    ax.set_xlabel({prettifyTitle(feature)}, fontsize=12)
+    plt.savefig(f"images/{ax.get_title()}.png", dpi=300, bbox_inches='tight')  # High-resolution save
 
 def print_uniques(df):
     """
@@ -178,4 +175,25 @@ def print_uniques(df):
     pd.set_option('display.max_colwidth', None) 
     styled_df = uniques_df.to_frame().style.set_properties(**{'text-align': 'left'})
     return styled_df
+
+def prettifyTitle(str):
+    """Capitalizes the first letter of every word in a string and strip underscores
+Args:
+    text: The input string.
+
+Returns:
+    The string with the first letter of each word capitalized, or the
+    original string if it's None or empty with the underscoes stripped.
+"""
+    str=str.replace('_',' ')
+    if not str:  # Check for None or empty string
+        return str
+
+    words = str.split()  # Split the string into a list of words
+    capitalized_words = [word.capitalize() for word in words] #Capitalize every word
+    return " ".join(capitalized_words)  # Join the words back into a string
+
+
+# print(modifyTitle('accident_severity Distribution by accident_cause'))
+   
     
