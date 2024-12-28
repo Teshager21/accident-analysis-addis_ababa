@@ -1,6 +1,7 @@
 import seaborn as sns
 from matplotlib import pyplot as plt
 import pandas as pd
+from datetime import datetime
 
 import sys
 
@@ -57,6 +58,7 @@ def count_plot(df, feature, title, ordered=True, ax=None, hue=None, figsize=(10,
     # Adjust layout and display the plot if it's a standalone figure
     if own_fig:
         plt.tight_layout()
+        plt.savefig(f"images/{ax.title}.png", dpi=300, bbox_inches='tight')  # High-resolution save
         plt.show()
 
 
@@ -92,6 +94,7 @@ def plot_crosstab(cross_tab, ax=None):
 
   # Display the plot (only if not using an external subplot)
   if ax is None:
+    plt.savefig(f"images/{ax.title}.png", dpi=300, bbox_inches='tight')  # High-resolution save
     plt.show()
 
 
@@ -151,6 +154,7 @@ def histogram_plot(df, feature, hue, ax=None):
     # Customize the plot appearance
     ax.set_title(f'{hue} Distribution by {feature}', fontsize=16, weight='bold')
     ax.set_xlabel(feature, fontsize=12)
+    plt.savefig(f"images/{ax.title}.png", dpi=300, bbox_inches='tight')  # High-resolution save
 
 def print_uniques(df):
     """
