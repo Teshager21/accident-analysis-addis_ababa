@@ -88,7 +88,7 @@ RTA_Dataset_addis_ababa_subcity can be used for numerous applications such as re
 
 - Gmail: [Natnael Chala](natnaelchala@gmail.com)
 - Github: [@natiichala](https://github.com/natiichala)
-
+- Linkedin: [Natnael Chala](https://www.linkedin.com/in/natnael-chala/)
 
 👤 **Author**
 - Gmail: [Rediet Tenaw](rediettenaw28@gmail.com)
