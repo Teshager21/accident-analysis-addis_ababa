@@ -150,7 +150,7 @@ def histogram_plot(df, feature, hue, ax=None):
 
     # Customize the plot appearance
     ax.set_title(f'{prettifyTitle(hue)} Distribution by {prettifyTitle(feature)}', fontsize=16, weight='bold')
-    ax.set_xlabel({prettifyTitle(feature)}, fontsize=12)
+    ax.set_xlabel(prettifyTitle(feature), fontsize=12)
     plt.savefig(f"images/{ax.get_title()}.png", dpi=300, bbox_inches='tight')  # High-resolution save
 
 def print_uniques(df):

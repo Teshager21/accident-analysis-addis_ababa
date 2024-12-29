@@ -15,6 +15,7 @@ This is Python based Exploratory Data Analysis(Data Visualization and Exploratio
 **RTA_Dataset_addis_ababa_subcity**
 ### Description
 This data set is collected from Addis Ababa Sub city police departments for Master's research work. The data set has been prepared from manual records of road traffic accident of the year 2017-20. All the sensitive information has been excluded during data encoding and finally, it has 32 features and 12316 instances of the accident
+![Alt Text](images\tableau_screenshot.jpg)
 
 ### Content
 Here is the definition of the features listed, based on their names and example values:
