@@ -2,6 +2,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 import pandas as pd
 from datetime import datetime
+import numpy as np
 
 import sys
 
@@ -194,6 +195,29 @@ Returns:
     return " ".join(capitalized_words)  # Join the words back into a string
 
 
-# print(modifyTitle('accident_severity Distribution by accident_cause'))
-   
-    
+
+def polar_barchart(df):
+
+    # Group the data by hour and count the number of accidents
+    hourly_counts = df.groupby('hour').size()
+
+    # Create a polar plot
+    fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
+
+    # Calculate angles for each hour
+    theta = np.linspace(0, 2 * np.pi, len(hourly_counts), endpoint=False)
+
+    # Plot the data
+    ax.bar(theta, hourly_counts, width=0.8 * (2 * np.pi / len(hourly_counts)), alpha=0.7, color='skyblue')
+
+    # Set the labels for each hour
+    ax.set_xticks(theta)
+    ax.set_xticklabels(['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'])
+    ax.set_xticklabels(ax.get_xticklabels(), fontdict={'horizontalalignment': 'center'})
+
+    # Customize the plot
+    ax.set_title('Hourly Accident Distribution')
+    ax.grid(True) 
+    plt.savefig(f"images/{ax.get_title()}.png", dpi=300, bbox_inches='tight')  # High-resolution save
+
+    plt.show()
